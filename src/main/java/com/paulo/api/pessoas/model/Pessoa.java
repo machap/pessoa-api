@@ -1,26 +1,23 @@
 package com.paulo.api.pessoas.model;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import javassist.SerialVersionUID;
-
 @Entity
-@Table(name = "tb_Pessoa")
+@Table(name = "tb_pessoa")
 public class Pessoa implements Serializable {
 
-	private static final long SerialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	private String nome;
-	private BigDecimal idade;
+	private int idade;
 	private String sexo;
 
 	public long getId() {
@@ -39,11 +36,11 @@ public class Pessoa implements Serializable {
 		this.nome = nome;
 	}
 
-	public BigDecimal getIdade() {
+	public int getIdade() {
 		return idade;
 	}
 
-	public void setIdade(BigDecimal idade) {
+	public void setIdade(int idade) {
 		this.idade = idade;
 	}
 
