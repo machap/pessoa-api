@@ -18,7 +18,7 @@ public class Pessoa implements Serializable {
 	private long id;
 	private String nome;
 	private int idade;
-	private String sexo;
+	private String email;
 
 	public long getId() {
 		return id;
@@ -44,12 +44,12 @@ public class Pessoa implements Serializable {
 		this.idade = idade;
 	}
 
-	public String getSexo() {
-		return sexo;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setSexo(String sexo) {
-		this.sexo = sexo;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 }
